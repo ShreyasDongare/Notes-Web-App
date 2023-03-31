@@ -9,10 +9,10 @@ const Header = () => {
   return (
     <div className={`h-16 ${dark ? " text-white  bg-slate-700" : "text-black bg-teal-400" } duration-300 ease-in sticky top-0 flex items-center justify-between px-5 shadow-lg`}>
       <div className="flex items-center h-full  gap-2">
-        <HiOutlineDocumentText size={30} />
-        <h1 className=" text-4xl select-none ">Notes</h1>
+        <HiOutlineDocumentText size={30} className="cursor-pointer" />
+        <h1 className=" text-4xl select-none cursor-pointer ">Notes</h1>
       </div>
-      <div onClick={() => setDark(!dark)}>
+      <div onClick={() => setDark(!dark)} className="cursor-pointer ">
         {dark ? (
           <BsMoonStars size={25} />
         ) : (
