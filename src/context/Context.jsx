@@ -5,19 +5,21 @@ import { v4 as uuidv4 } from "uuid";
 const NotesContext = createContext();
 
 const NotesProvider = ({ children }) => {
-  
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const [isCreate, setIsCreate] = useState(false);
-  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes")) || [])
+  const [notes, setNotes] = useState(
+    JSON.parse(localStorage.getItem("notes")) || []
+  );
   const [title, setTitle] = useState("");
   const [textNote, setTextNote] = useState("");
   const navigate = useNavigate();
 
 
-  useEffect(()=>{
-localStorage.setItem("notes", JSON.stringify(notes))
-  },[notes])
-  
+  //notes lcoalStorage
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -31,13 +33,11 @@ localStorage.setItem("notes", JSON.stringify(notes))
       setNotes((prevNotes) => [note, ...prevNotes]);
       setTitle("");
       setTextNote("");
-      setIsCreate(false)
+      setIsCreate(false);
       //navigte
       navigate("/");
     }
   };
-
-  
 
   const toggleBackButton = () => {
     setIsCreate(!isCreate);

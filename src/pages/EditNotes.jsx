@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNotesContext } from "../context/Context";
 import { AiOutlineCheck } from "react-icons/ai";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -10,6 +10,8 @@ const EditNotes = () => {
   const [editTitle, setEditTitle] = useState(editingNote[0].title);
   const [editNote, setEditNote] = useState(editingNote[0].note);
   const navigate = useNavigate();
+
+  
 
   const handleEdit = () => {
     if(editNote && editNote){
