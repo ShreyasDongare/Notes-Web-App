@@ -4,7 +4,7 @@ import Header from './components/Header';
 import { useNotesContext } from './context/Context';
 
 const  App = () => {
-  const {dark} = useNotesContext()
+  const {dark} = useNotesContext() 
 
 
 
