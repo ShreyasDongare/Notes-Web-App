@@ -8,7 +8,7 @@ const NotesProvider = ({ children }) => {
   
   const [dark, setDark] = useState(true);
   const [isCreate, setIsCreate] = useState(false);
-  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes") || []))
+  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes")) || [])
   const [title, setTitle] = useState("");
   const [textNote, setTextNote] = useState("");
   const navigate = useNavigate();
