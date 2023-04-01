@@ -4,12 +4,13 @@ import { MdDelete } from "react-icons/md";
 import { FaRegEdit } from "react-icons/fa";
 
 const SingleNote = ({ details }) => {
-  const { dark, deleteNote } = useNotesContext();
+  const { dark, deleteNote,  } = useNotesContext();
+  
   const { id, note, date, title } = details;
   return (
     <div
       key={id}
-      className={`rounded select-none  col-span-1 cursor-pointer ${
+      className={`  rounded select-none  col-span-1 cursor-pointer ${
         dark ? "bg-gray-500 " : "bg-teal-200 shadow-gray-300"
       } bg-gray-500 py-2 px-5 my-2 select-none  shadow-md `}
     >
