@@ -37,6 +37,8 @@ localStorage.setItem("notes", JSON.stringify(notes))
     }
   };
 
+  
+
   const toggleBackButton = () => {
     setIsCreate(!isCreate);
   };
@@ -51,6 +53,7 @@ localStorage.setItem("notes", JSON.stringify(notes))
         dark,
         setDark,
         notes,
+        setNotes,
         deleteNote,
         toggleBackButton,
         isCreate,
@@ -59,6 +62,7 @@ localStorage.setItem("notes", JSON.stringify(notes))
         setTitle,
         textNote,
         setTextNote,
+        setIsCreate,
       }}
     >
       {children}

@@ -36,7 +36,9 @@ const SingleNote = ({ details }) => {
           />
         </div>
       </div>
-      <p className="my-3">{note}</p>
+      <p className="my-3">
+        {note.length > 150 ? note.substring(0, 150)+"..." : note}
+      </p>
       <p className="text-sm text-end">{date}</p>
     </div>
   );

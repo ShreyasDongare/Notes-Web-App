@@ -5,7 +5,7 @@ import { AiOutlineCheck } from "react-icons/ai";
 const CreateNotes = () => {
   const {
     dark,
-    toggleBackButton,
+    
     handleSubmit,
     title,
     setTitle,
