@@ -6,7 +6,6 @@ import { NotesProvider } from "./context/Context";
 import "./index.css";
 import CreateNotes from "./pages/CreateNotes";
 import EditNotes from "./pages/EditNotes";
-import ErrorPage from "./pages/ErrorPage";
 import Notes from "./pages/Notes";
 
 const appRouter = createBrowserRouter([
@@ -17,7 +16,6 @@ const appRouter = createBrowserRouter([
         <App />
       </NotesProvider>
     ),
-    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
