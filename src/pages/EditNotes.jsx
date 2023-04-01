@@ -12,18 +12,20 @@ const EditNotes = () => {
   const navigate = useNavigate();
 
   const handleEdit = () => {
-    console.log("called");
-    const newNotes = notes.map((note) => {
-      if (note.id === editingNote[0].id) {
-        return { ...editingNote[0], title: editTitle, note: editNote };
-      } else {
-        return note;
-      }
-    });
-    console.log(newNotes);
-    setNotes(newNotes);
-    navigate("/");
-    setIsCreate(false);
+    if(editNote && editNote){
+
+      const newNotes = notes.map((note) => {
+        if (note.id === editingNote[0].id) {
+          return { ...editingNote[0], title: editTitle, note: editNote };
+        } else {
+          return note;
+        }
+      });
+      console.log(newNotes);
+      setNotes(newNotes);
+      navigate("/");
+      setIsCreate(false);
+    }
   };
 
   return (
