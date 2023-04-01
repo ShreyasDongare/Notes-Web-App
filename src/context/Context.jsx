@@ -5,13 +5,10 @@ import { v4 as uuidv4 } from "uuid";
 const NotesContext = createContext();
 
 const NotesProvider = ({ children }) => {
-  useEffect(()=>{
-    const notes = JSON.parse(localStorage.getItem("notes") || [])
-    setNotes(notes)
-  },[])
+  
   const [dark, setDark] = useState(true);
   const [isCreate, setIsCreate] = useState(false);
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes") || []))
   const [title, setTitle] = useState("");
   const [textNote, setTextNote] = useState("");
   const navigate = useNavigate();
